@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 10%;
+    position:absolute ;
+    top: 0;
+    left: 0;
+    z-index: 11;
+}
+nav{
+    margin-top: 10px;
+    
+}
+nav a{
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    margin-left: 34px;
+    text-transform: uppercase;
+    
+}
+nav a::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.836);
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s ease;
+}
+nav a:hover::before{
+    width: 100%;
+}
+section{
+    width: 80%;
+    padding: 15px 10%;
+    transition: 0.5s ease;
+}
+.section--1{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #000;
+
+}
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 00;
+}
+.section--1::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    
+    z-index: 5;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+.section--1 h1{
+    font-size: 140px;
+    margin-bottom: 30px;
+    color:black;
+    font-weight: 600;
+    transition: 0.5s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.section--1 h1:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+.section--1 p{
+    margin-bottom:40px ;
+    line-height: 25px;
+    width: 60%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+.section--1 a{
+    padding: 15px 30px;
+    background: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+.section--1 a:hover{
+    color: #000;
+    background: #3336bb;
+
+}
+.content{
+    width: 100%;
+    z-index: 9;
+
+}
+@media(max-width:768px){
+    nav(display: none;)
+    .section--1 h1(font-size: 3em;)
+    .section--1 p(width: 100%;)
+    .mob-menu{
+        background: url('images/hamburger-icons.png') no-repeat;
+        width: 40px;
+        height: 40px;
+        transition: 0.3s ease;
+    }
+}
